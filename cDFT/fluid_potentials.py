@@ -48,7 +48,6 @@ along with cDFT.  If not, see <https://www.gnu.org/licenses/>.
 
 import numpy as np
 
-
 def LJ_104(X):
 
     return (0.8*np.power(X,-10.0) - 2.0*np.power(X,-4.0))
@@ -117,7 +116,14 @@ def rs_TLJ_const(minimise):
     del minimise.DFT.potential; del potential; del armin; del brmin; del zmask;
     del rdash; del npmask; del pmask;
 
-def fourier_TLJ_const(minimise):
+def fourier_TLJ_const(minimise): 
+
+    """
+    !!!
+
+    I think this gives the truncated lennard jones in fourier space. 
+    
+    """
 
     rmin2 = minimise.DFT.rmin*minimise.DFT.rmin
     rmin104 = LJ_104(minimise.DFT.rmin)

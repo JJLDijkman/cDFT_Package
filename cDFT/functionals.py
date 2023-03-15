@@ -145,7 +145,6 @@ def calculate_Rosenfeld_derivatives(DFT):
     DFT.d2v[nzp] = calculate_dn1v(DFT,nzp)/(pi4*DFT.R)
     DFT.d2v[nzp] -= (DFT.n1v[nzp]/DFT.n3neg[nzp] + DFT.n2[nzp]*DFT.n2v[nzp]/(pi4*n3neg2[nzp]))
 
-
 # Whitebear functional specific functions
 
 def Whitebear_free_energy(DFT):
@@ -258,7 +257,6 @@ def WhitebearII_free_energy(DFT):
 
     return free_energy
 
-
 def calculate_WhitebearII_dphi2(DFT, nzp):
 
     """
@@ -267,7 +265,6 @@ def calculate_WhitebearII_dphi2(DFT, nzp):
 
     DFT.dphi2[nzp] = -1. + 2.*(-1./DFT.n3[nzp] - \
 						np.log(DFT.n3neg[nzp])/(DFT.n3[nzp]*DFT.n3[nzp]))
-
 
 def calculate_WhitebearII_dphi3(DFT,nzp):
 
